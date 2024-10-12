@@ -24,6 +24,7 @@ class Information(models.Model):
 
 
 #Home
+#add top
 class Tools(models.Model):
     image = models.ImageField(upload_to = 'images/', verbose_name = 'Imagem')
     title = models.CharField(max_length = 50, verbose_name = 'Titulo')
@@ -72,7 +73,7 @@ class DrawingAndCardAndKnow(models.Model):
     image = models.ImageField(upload_to = 'images/', verbose_name = 'Imagem')
     file = models.FileField(upload_to = 'downloads/', blank=True, null=True, verbose_name = 'Arquivo para Download')
     tip = models.CharField(max_length = 30, verbose_name = "Tipo")
-    description = models.TextField(verbose_name = 'Descrição')
+    description = models.TextField(verbose_name = 'Descrição')#mudar
     
     def __str__(self):
         return f'{self.tip} - {self.description}'
